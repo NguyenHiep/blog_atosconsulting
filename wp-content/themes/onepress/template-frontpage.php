@@ -5,47 +5,53 @@
  * @package OnePress
  */
 
-get_header(); ?>
+get_header();
 
-	<div id="content" class="site-content">
-		<main id="main" class="site-main" role="main">
-            <?php
+$layout = onepress_get_layout();
+?>
 
-            do_action( 'onepress_frontpage_before_section_parts' );
+<div id="content" class="site-content">
+  <div class="page-header">
+    <div class="container">
+        <?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+        <?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
+    </div>
+  </div>
+  <div id="content-inside" class="container <?php echo esc_attr( $layout ); ?>">
+    <div id="primary" class="content-area">
+      <main id="main" class="site-main" role="main">
+          <?php
+            // the query
+            $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish','posts_per_page'=>6));
+          ?>
+          <?php if ( $wpb_all_query->have_posts() ) : ?>
 
-			if ( ! has_action( 'onepress_frontpage_section_parts' ) ) {
+              <?php /* Start the Loop */ ?>
+              <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
 
-				$sections = apply_filters( 'onepress_frontpage_sections_order', array(
-                    'hero', 'features', 'about', 'services', 'videolightbox', 'gallery', 'counter', 'team',  'news', 'contact'
-                ) );
+                  <?php
+                     get_template_part( 'template-parts/content', 'list-home' );
+                  ?>
 
-				foreach ( $sections as $section ){
-                    /**
-                     * Hook before section
-                     */
-                    do_action('onepress_before_section_'.$section );
-                    do_action( 'onepress_before_section_part', $section );
+              <?php endwhile; ?>
+              <?php //wp_reset_postdata(); ?>
+              <?php the_posts_navigation(); ?>
 
-                    /**
-                     * Load section template part
-                     */
-					get_template_part( 'section-parts/section', $section );
+          <?php else : ?>
 
-                    /**
-                     * Hook after section
-                     */
-                    do_action('onepress_after_section_part', $section );
-                    do_action('onepress_after_section_'.$section );
-				}
+              <?php //get_template_part( 'template-parts/content', 'none' ); ?>
 
-			} else {
-				do_action( 'onepress_frontpage_section_parts' );
-			}
+          <?php endif; ?>
 
-            do_action( 'onepress_frontpage_after_section_parts' );
+      </main><!-- #main -->
+    </div><!-- #primary -->
 
-			?>
-		</main><!-- #main -->
-	</div><!-- #content -->
+      <?php if ( $layout != 'no-sidebar' ) { ?>
+          <?php get_sidebar(); ?>
+      <?php } ?>
+
+  </div><!--#content-inside -->
+</div><!-- #content -->
 
 <?php get_footer(); ?>
+

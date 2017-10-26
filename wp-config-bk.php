@@ -37,7 +37,6 @@ define('DB_CHARSET', 'utf8mb4');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-define('DISALLOW_FILE_MODS',true);
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -47,14 +46,14 @@ define('DISALLOW_FILE_MODS',true);
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'Ij(Ot5vQNn}#wp=jq0I&H)Cg@-U=/HM2dXV>U+Lvgvw5o)(h}x8(D]zCNjpA9u,?');
-define('SECURE_AUTH_KEY',  '*Y?{&H|ZV6ZnSPWLi68IMXNN&G>m:6>&w:Eo@}}prztspNP%Gc}fog]-pOjfIo<8');
-define('LOGGED_IN_KEY',    '`TT;9<CAW0]TlE{>T1jNB3fd{aIB~i$RY($p2>hR(1A_0qG9i]Jh*IHcMN&YQw+A');
-define('NONCE_KEY',        '5 ,Xw1-kt[Txf S&zF,m_Jbjt+Y;E$Ughk);`vX7&PJ-jS|wt*MUgZ2|#Vxjg&kq');
-define('AUTH_SALT',        'g$EZ{Sk)|aj_phbbrW@^&TRDv4*QU/1R(6q7]IdxNbhJFxWU;,<8?Y9oHGNx)9$o');
-define('SECURE_AUTH_SALT', 'Rf4GoVD6MMSjyJsdC+AHnV#}_w|h|4lZsUV~%IxpmpQHq@T6kzftMY5^Nm9wYrkL');
-define('LOGGED_IN_SALT',   '6yU.aH[!ClO!xIH<y:<IYcX-`<~v_A!_pm9zLOvEDd5;2yxio*y$tO!A0aC:}Wix');
-define('NONCE_SALT',       'd0:Ef~gm4=g~/$]~#A}~Bk,a.%=!J(BH~^kDBMB{D^5QC@3^*,VUg_x${4+~EbE+');
+define('AUTH_KEY',         'J~(R^NA+A;#%H6k=Z- kj.#*`tD?vHV(aN-JcZV5n#7]xjKh*l1Ve]uNaS6j2C7Y');
+define('SECURE_AUTH_KEY',  'aiG.S<.$p>DewD;df$XVVL8W~>`P:R|4!^jW<.Te6m.rj*Ouo:Oh Uf~XU<N$#(,');
+define('LOGGED_IN_KEY',    '{|Fh sN YMv5;Q7d6fJ$Mud#MXPr0&XT1*VJrH ]X<oIvaDtnH9+I5ibLi*k=U_=');
+define('NONCE_KEY',        '>4{,)2}jj,jE:JUX%yGvWY=Ko@3O_:}^F[vQtEk[-+qQqrK]}2 h~~5RNcg@rAlz');
+define('AUTH_SALT',        '~`)UppRJPGp7>3Nn}i_vBuDYjOKbd?B;yJs=fO3LMUumaq(l^`[$<bQEV%,Y}nbm');
+define('SECURE_AUTH_SALT', '_8f4RT6d~yfo?+YLq6xsDKAqZr5o_v6?>BY}a)-(I|J==VQWSCDRW-LPj4wtMCNZ');
+define('LOGGED_IN_SALT',   'i!:PW{7~_[{:k{G}SS`1`S7XD2$l1~Tjw_KPY+ce-O&{ej%(MB.gE0hXrX^-rZmE');
+define('NONCE_SALT',       'yhA(dPquLyr6|I8_4|&VD,~;1.FR@j$Mh&(N4A  T0AuWx#4Yb~V#Cu:tlZ[u[H{');
 
 /**#@-*/
 

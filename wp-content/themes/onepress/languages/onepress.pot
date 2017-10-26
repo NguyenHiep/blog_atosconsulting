@@ -728,11 +728,11 @@ msgid ""
 "showcase, freelancers and everyone else who appreciate good design. The "
 "theme overall is an elegant and classic one, a fine example of Bootstrap 4 "
 "WordPress theme which compatibility with latest version of WooCommerce. "
-"(Live preview : http://www.famethemes.com/preview/?theme=OnePress)"
+""
 msgstr ""
 
 #. URI of the theme
-msgid "https://www.famethemes.com/themes/onepress/"
+msgid "http://minhhiep.info/"
 msgstr ""
 
 #. Author of the theme
@@ -740,5 +740,5 @@ msgid "FameThemes"
 msgstr ""
 
 #. Author URI of the theme
-msgid "http://www.famethemes.com"
+msgid "http://minhhiep.info/"
 msgstr ""

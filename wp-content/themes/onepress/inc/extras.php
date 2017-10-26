@@ -130,22 +130,3 @@ if ( ! function_exists( 'onepress_get_layout' ) ) {
 }
 
 
-
-
-/**
- * Woocommerce Support
- */
-if ( class_exists( 'WooCommerce' ) ) {
-    remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
-
-    add_filter( 'loop_shop_per_page', 'onepress_number_products_per_page', 20 );
-
-    function onepress_number_products_per_page( $number ) {
-        // $cols contains the current number of products per page based on the value stored on Options -> Reading
-        // Return the number of products you wanna show per page.
-        $number = 20;
-        return $number;
-    }
-
-}
-

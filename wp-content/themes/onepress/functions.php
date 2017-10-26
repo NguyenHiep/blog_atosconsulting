@@ -79,7 +79,7 @@ if ( ! function_exists( 'onepress_setup' ) ) :
 		/*
 		 * WooCommerce support.
 		 */
-		add_theme_support( 'woocommerce' );
+		#add_theme_support( 'woocommerce' );
 
         /**
          * Add theme Support custom logo
@@ -148,7 +148,7 @@ function onepress_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
-    if ( class_exists( 'WooCommerce' ) ) {
+    /*if ( class_exists( 'WooCommerce' ) ) {
         register_sidebar( array(
             'name'          => esc_html__( 'WooCommerce Sidebar', 'onepress' ),
             'id'            => 'sidebar-shop',
@@ -158,7 +158,7 @@ function onepress_widgets_init() {
             'before_title'  => '<h2 class="widget-title">',
             'after_title'   => '</h2>',
         ) );
-    }
+    }*/
 
 }
 add_action( 'widgets_init', 'onepress_widgets_init' );
@@ -169,6 +169,7 @@ add_action( 'widgets_init', 'onepress_widgets_init' );
 function onepress_scripts() {
 
     $theme = wp_get_theme( 'onepress' );
+
     $version = $theme->get( 'Version' );
 
 	wp_enqueue_style( 'onepress-fonts', onepress_fonts_url(), array(), $version );
@@ -196,14 +197,14 @@ function onepress_scripts() {
     // Load gallery scripts
     $galley_disable  = get_theme_mod( 'onepress_gallery_disable' ) ==  1 ? true : false;
     $is_shop = false;
-    if ( function_exists( 'is_woocommerce' ) ) {
+    /*if ( function_exists( 'is_woocommerce' ) ) {
         if ( is_woocommerce() ) {
             $is_shop = true;
         }
-    }
+    }*/
 
     // Don't load scripts for woocommerce because it don't need.
-    if ( ! $is_shop ) {
+    /*if ( ! $is_shop ) {
         if ( ! $galley_disable || is_customize_preview()) {
             $onepress_js_settings['gallery_enable'] = 1;
             $display = get_theme_mod('onepress_gallery_display', 'grid');
@@ -230,7 +231,7 @@ function onepress_scripts() {
 
         }
         wp_enqueue_style('onepress-gallery-lightgallery', get_template_directory_uri() . '/assets/css/lightgallery.css');
-    }
+    }*/
 
 	wp_enqueue_script( 'onepress-theme', get_template_directory_uri() . '/assets/js/theme.js', array(), $version, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -18,8 +18,11 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?>>
+<?php
+$class = ! is_home() ? "archive" : "";
+//body_class( $class );
+?>
+<body <?php body_class($class); ?>>
 <?php do_action( 'onepress_before_site_start' ); ?>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'onepress' ); ?></a>
