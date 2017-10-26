@@ -11,13 +11,7 @@ $layout = onepress_get_layout();
 ?>
 
 <div id="content" class="site-content">
-  <div class="page-header">
-    <div class="container">
-        <?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
-        <?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
-    </div>
-  </div>
-  <div id="content-inside" class="container <?php echo esc_attr( $layout ); ?>">
+  <div id="content-inside" class="clearfix container <?php echo esc_attr( $layout ); ?>">
     <div id="primary" class="content-area">
       <main id="main" class="site-main" role="main">
           <?php

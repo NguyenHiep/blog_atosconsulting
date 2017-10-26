@@ -10,6 +10,21 @@
  */
 ?>
     <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="footer-connect">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+              <div class="footer-social">
+                <h5 class="follow-heading">Our Social Channels</h5><a target="_blank" href="https://twitter.com/Atos_CH" title="Twitter"><i class="fa fa-twitter"></i></a><a target="_blank" href="https://www.facebook.com/atosconsultingswitzerland" title="Facebook"><i class="fa fa-facebook"></i></a>                                <a href="https://linkedin.com/company/atos-consulting-switzerland" title="LinkedIn" target="_blank"><i class="icon-linkedin"></i></a>
+                <a href="https://www.xing.com/company/atosconsulting" title="Xing" target="_blank"><i class="icon-xing"></i></a>
+                <a href="https://www.kununu.com/ch/atosconsulting" title="Kununu" target="_blank"><i class="icon-kununu"></i></a>
+              </div>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+        </div>
+      </div>
         <?php
         $onepress_btt_disable = get_theme_mod('onepress_btt_disable');
         $onepress_social_footer_title = get_theme_mod('onepress_social_footer_title', esc_html__('Keep Updated', 'onepress'));
@@ -86,22 +101,86 @@
                 </div>
             </div>
         <?php endif; ?>
-
         <div class="site-info">
-            <div class="container">
-                <?php if ($onepress_btt_disable != '1') : ?>
-                    <div class="btt">
-                        <a class="back-top-top" href="#page" title="<?php echo esc_html__('Back To Top', 'onepress') ?>"><i class="fa fa-angle-double-up wow flash" data-wow-duration="2s"></i></a>
-                    </div>
-                <?php endif; ?>
-                <?php
-                /**
-                 * hooked onepress_footer_site_info
-                 * @see onepress_footer_site_info
-                 */
-                do_action('onepress_footer_site_info');
-                ?>
+          <div class="container">
+            <div class="btt">
+              <a class="back-top-top" href="#page" title="Back To Top"><i class="fa fa-angle-double-up wow flash" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: flash;"></i></a>
             </div>
+            <div class="ctp-footer-cta">
+              <ul class="no-bullet">
+                <li>
+                  <a href="http://ch.atosconsulting.com/#!/competencies" class="button cta" target="_blank">
+                    <i class="icon icon-trophy"></i>
+                    <span>Compe&shy;tencies</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://ch.atosconsulting.com/#!/home?section=events" class="button cta" target="_blank">
+                    <i class="icon icon-newspaper-o"></i>
+                    <span>News &amp; Events</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://ch.atosconsulting.com/#!/career?section=jobs" class="button cta" target="_blank">
+                    <i class="icon icon-child"></i>
+                    <span>Jobs</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://ch.atosconsulting.com/#!/about?section=contact" class="button cta" target="_blank">
+                    <i class="icon icon-envelope"></i>
+                    <span>Contact</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://ch.atosconsulting.com/#!/home" class="button cta" target="_blank">
+                    <i class="icon icon-home"></i>
+                    <span>Atos Consulting CH</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="ctp-hr">
+              <hr>
+            </div>
+            <div class="ctp-footer-address">
+              <ul class="no-bullet">
+                <li>
+                  <h6>Nyon</h6>
+                  <p>27 ch. de Précossy<br>
+                    CH-1260 Nyon<br>
+                    Tel +41 22 306 4646<br>
+                    <a href="&#10;https://www.google.ch/maps/place/Chemin+de+precossy+27,+1260+Nyon/@46.3899562,6.2240407,17z/data=!3m1!4b1!4m2!3m1!1s0x478c5cd4acc16f4b:0xf379c14bf37dc4e3" target="_blank">Plan Route</a>
+                  </p>
+                </li>
+                <li>
+                  <h6>Zurich</h6>
+                  <p>Freilagerstrasse 28<br>
+                    CH-8047 Zürich<br>
+                    Tel +41 58 702 2222<br>
+                    <a href="https://www.google.ch/maps/place/Freilagerstrasse+28,+8047+Z%C3%BCrich/@47.3788507,8.4898923,17z/data=!3m1!4b1!4m2!3m1!1s0x47900bd25e6cf419:0x4b4c6ff0aa3af934" target="_blank">Plan Route</a>
+                  </p>
+                </li>
+                <li>
+                  <h6>Basel </h6>
+                  <p>Aeschenvorstadt 71<br>
+                    CH-4051 Basel<br>
+                    Tel +41 61 271 9140<br>
+                    <a href="https://www.google.ch/maps/place/Aeschenvorstadt+71,+4051+Basel/@47.5518987,7.5922319,17z/data=!3m1!4b1!4m2!3m1!1s0x4791b84ccada0915:0xbd88b41006126d19" target="_blank">Plan Route</a>
+                  </p>
+                </li>
+                <li>
+                  <h6>Budapest </h6>
+                  <p>Infopark A<br>
+                    Neumann Janos u 1.<br>
+                    1117 Budapest<br>
+                    Tel +36 1 920 2500<br>
+                    <a href="https://www.google.ch/maps/place/Budapest,+1117+Hungary/@47.4693965,19.058717,17z/data=!3m1!4b1!4m2!3m1!1s0x4741dd07818cfbe7:0x58c6b4918fcfefa" target="_blank">Plan Route</a>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            Copyright © 2017 Atos Consulting CH </div>
         </div>
         <!-- .site-info -->
 

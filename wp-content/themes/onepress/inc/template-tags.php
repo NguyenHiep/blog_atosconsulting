@@ -61,6 +61,7 @@ if ( ! function_exists( 'onepress_site_header' ) ) {
     function onepress_site_header(){
         ?>
         <header id="masthead" class="site-header" role="banner">
+            <div class="site-header-banner"><i class="icon-pen"></i> Atos Consulting CH Blog</div>
             <div class="container">
                 <div class="site-branding">
                 <?php
