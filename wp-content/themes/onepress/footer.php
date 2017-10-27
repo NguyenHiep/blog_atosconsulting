@@ -10,21 +10,6 @@
  */
 ?>
     <footer id="colophon" class="site-footer" role="contentinfo">
-      <div class="footer-connect">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-              <div class="footer-social">
-                <h5 class="follow-heading">Our Social Channels</h5><a target="_blank" href="https://twitter.com/Atos_CH" title="Twitter"><i class="fa fa-twitter"></i></a><a target="_blank" href="https://www.facebook.com/atosconsultingswitzerland" title="Facebook"><i class="fa fa-facebook"></i></a>                                <a href="https://linkedin.com/company/atos-consulting-switzerland" title="LinkedIn" target="_blank"><i class="icon-linkedin"></i></a>
-                <a href="https://www.xing.com/company/atosconsulting" title="Xing" target="_blank"><i class="icon-xing"></i></a>
-                <a href="https://www.kununu.com/ch/atosconsulting" title="Kununu" target="_blank"><i class="icon-kununu"></i></a>
-              </div>
-            </div>
-            <div class="col-sm-2"></div>
-          </div>
-        </div>
-      </div>
         <?php
         $onepress_btt_disable = get_theme_mod('onepress_btt_disable');
         $onepress_social_footer_title = get_theme_mod('onepress_social_footer_title', esc_html__('Keep Updated', 'onepress'));

@@ -5192,6 +5192,11 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+.widget .search-form > label,
+.widget .search-form > input {
+  width: 100% !important;
+}
+
 @media screen and (min-width: 940px) {
   #secondary {
     margin-top: 60px;

@@ -170,7 +170,7 @@ function onepress_scripts() {
 
     $theme = wp_get_theme( 'onepress' );
 
-    $version = '1.0.12';//$theme->get( 'Version' );
+    $version = '1.0.13';//$theme->get( 'Version' );
 
 	wp_enqueue_style( 'onepress-fonts', onepress_fonts_url(), array(), $version );
 	wp_enqueue_style( 'onepress-animate', get_template_directory_uri() .'/assets/css/animate.min.css', array(), $version );
